@@ -1,0 +1,426 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.fixed-top {
+  box-shadow: 0 0.0125rem 0.675rem rgba(0 0 0 /50%);
+
+  /* percentage of senstivity of the color */
+}
+.navbar-nav .nav-item .nav-link {
+  text-align: center;
+  /*to get them in the middle of the page while toggling*/
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: red;
+  /*must mention all the classes*/
+}
+.btn-danger:hover {
+  color: red;
+  background: transparent;
+  /* how U make professional no background */
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+  /* 
+   hover : during the step on the thing
+   focus :  after the click
+   active: during the click itself
+   */
+}
+.home .home-banner-1,
+.home .home-banner-2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  position: relative;
+  min-height: 650px;
+}
+.home-banner-1 {
+  background-image: url(images/slide1.jpg);
+}
+.home-banner-2 {
+  background-image: url(images/slide2.jpg);
+}
+.home-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-110%, -50%);
+}
+.home-banner-text h1 {
+  font-size: 6rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: red;
+  width: 2.5rem;
+  /*how to change the color and witdh of button indicators*/
+}
+.home .carousel-control-next-icon,
+.home .carousel-control-prev-icon {
+  background: transparent;
+}
+.home .slider-icon {
+  font-size: 3rem;
+  font-weight: 600;
+  color: red;
+}
+.offers {
+  padding-top: 9rem;
+}
+.offers .offer-box .offer-image::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 2;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  transform: skewX(-25deg);
+}
+.offers .offer-box .offer-image img {
+  transform: scale(1.02);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.offers .offer-box:hover .offer-image::before {
+  animation: effect_shine 1s;
+}
+.offers .offer-overlay::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.offers .offer-box .offer-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transition: all 250ms ease-out;
+  justify-content: center;
+  align-items: center;
+}
+.offers .offer-box .offer-info .heading-bigger {
+  font-size: 4.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #fff;
+}
+.offers .offer-box .offer-info .offer-title {
+  color: #fff;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+.btn-outline-danger {
+  color: #fff;
+  border-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.btn-outline-danger :hover {
+  color: red;
+  border-color: red;
+}
+@keyframes effect_shine {
+  100% {
+    left: 150%;
+  }
+}
+.products {
+  padding-top: 8.5rem;
+}
+.headline h2::before {
+  content: "";
+  width: 10%;
+  height: 0.125rem;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+}
+.contacts .testing h2::after {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  /* border: red 20% solid; */
+  /*
+we cannot make borders beacuse this is pseudo element
+*/
+  background-color: red;
+  width: 10%;
+  height: 0.2rem;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  /*to decrease the sharpness*/
+}
+.products a {
+  text-decoration: none;
+  color: black;
+}
+.product-list .product-image img {
+  transition: all 500ms ease-in-out;
+}
+.product-list .product-image .product-image-second {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.product-list .product-image:hover .product-image-second {
+  opacity: 1;
+}
+
+.product-list .product-image .sale {
+  background-color: red;
+  border-radius: 0.333rem;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.125rem;
+  line-height: 1.5rem;
+  padding: 0.125rem 0.8rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  /* z-index: 99; */
+}
+.product-list .product-name h3:hover {
+  color: red;
+}
+.product-list .product-name .amount {
+  color: red;
+  font-weight: 500;
+}
+.product-list .product-name .amount del {
+  color: grey;
+}
+.product-list .product-name .ti-star {
+  color: grey;
+}
+.product-list .product-name .ti-star.active {
+  color: red;
+}
+.product-list .product-name .add-to-card {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease 0s;
+}
+.product-list .product-name .add-to-card:hover {
+  color: red;
+}
+.up-to-off {
+  position: relative;
+}
+.up-to-off::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.up-to-off img {
+  transition: 0.5s;
+  overflow: hidden;
+}
+.up-to-off:hover img {
+  transform: scale(1.12);
+}
+.up-to-content {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*this how youb middle the div inside the div*/
+  /*
+  the steps
+  1- position: absolute;
+  2- top: 50%;
+  3-left: 50%;
+  4-transform: translate(-50%,-50%);
+  */
+  z-index: 3;
+}
+.special {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.special-offer {
+  background: #fff;
+}
+.special .countdown-counter {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.special .countdown-counter li {
+  margin-right: 4rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  font-weight: 500;
+}
+.special .countdown-counter li span {
+  font-weight: 500;
+}
+.special .countdown-price del {
+  color: gray;
+  font-size: 1rem;
+}
+.testimonials {
+  padding: 5rem 0 8rem;
+}
+.testimonials .testimonial-wrapper {
+  box-shadow: 0 0 0.5rem 0 rgba(0 0 0 / 5%);
+  background: #fff;
+  margin: auto;
+  padding: 2rem 5rem;
+  border: 0.063rem solid red;
+  border-radius: 0.625rem;
+}
+.testimonials .testimonial-wrapper img {
+  border-radius: 100%;
+  width: 10rem;
+  height: 10rem;
+  /*to make it circle*/
+  /*
+    the steps 
+    1- make border-radius ==100%
+    2-make the height ==width
+    */
+  margin: 1.25rem auto;
+  object-fit: cover;
+  background-color: #fff;
+  border: 0.063rem solid #fff;
+}
+.testimonials .testimonial-wrapper .username span {
+  color: gray;
+  margin: 1rem 0;
+  /* up down left right*/
+}
+.testimonials .carousel-control-prev-icon,
+.testimonials .carousel-control-next-icon {
+  background: transparent;
+  left: -8.5rem;
+}
+.testimonials .slider-icon {
+  font-size: 3rem;
+  font-weight: 600;
+  color: red;
+}
+.contacts {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 4rem 0;
+}
+.contacts .form-group {
+  margin: 1rem 0;
+}
+.contacts .form-control {
+  box-shadow: 0 0.0125rem 0.675rem rgba(0 0 0 /20%);
+  height: 3rem;
+  border: none;
+}
+.copyright {
+  background-color: red;
+}
+.copyright p,
+a {
+  color: #fff;
+}
+
+/****************************************************/
+
+@media (max-width: 1400px) {
+  .special .countdown-counter li {
+    margin-right: 2rem;
+  }
+}
+@media (max-width: 1030px) {
+  .home .home-banner-1,
+  .home .home-banner-2 {
+    background-position: 65% center;
+    min-height: 550px;
+  }
+  .home-banner-text {
+    transform: translate(-80%, -50%);
+  }
+  .offers .offer-box .offer-info .heading-bigger {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 991px) {
+  .home-banner-text {
+    transform: translate(-66%, -50%);
+  }
+  .special .countdown-counter {
+    justify-content: center;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    text-align: center;
+    /*to get them in the middle of the page while toggling*/
+    border-bottom: grey solid 1px !important;
+    max-width: 150px !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .home .home-banner-1,
+  .home .home-banner-2 {
+    background-position: 50% center;
+    min-height: 450px;
+  }
+  .home-banner-text {
+    text-align: center;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .up-to-content h2 {
+    font-size: 0.75rem;
+  }
+
+  .special .countdown-counter li {
+    margin-right: 2rem;
+  }
+}
