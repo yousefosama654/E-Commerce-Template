@@ -1,2 +1,2 @@
 # E-Commerce-Template
-Front-End Using Html &amp; CSS &amp; Bootstrap &amp; JS
+Front-End template conssidered as a collection  of css properties & html tags I have learned 
