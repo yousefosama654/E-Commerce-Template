@@ -1,2 +1,2 @@
 # E-Commerce-Template
-Front-End template conssidered as a collection  of css properties & html tags I have learned 
+Front-End template considered as a collection of CSS properties & html tags I have learned.
